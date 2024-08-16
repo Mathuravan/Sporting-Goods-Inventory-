@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sports equipments</title>
+<style>
+#navbar {
+    background-color: #14346c;
+    padding: 10px;
+    
+}
+
+#navbar ul {
+    padding: 0;
+    list-style: none;
+    text-align: right;
+}
+
+#navbar li {
+    display: inline;
+}
+
+#navbar a {
+    color: rgb(251, 187, 52);
+    text-decoration: none;
+    font-size: 20px;
+    padding-right: 25px;
+}
+.logo{
+    width: 250px;
+}
+.nav3{
+    background-color: rgb(251, 187, 52);
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: space-between;
+    position:sticky;
+}
+.box1{
+  
+    background-color:rgb(251, 187, 52);
+}
+.box2{
+  
+    background-color:rgb(251, 187, 52);
+    display:flex;
+    justify-content: center;
+    font-size: 60px;
+    color: black;
+    font-family:'Orbitron', sans-serif;
+    font-weight: 800;
+    
+}
+.navhover li{
+    padding: 10px;
+}
+.navhover li:hover{
+    background-color: rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+    
+}
+.dropbtn {
+    
+    background-color: #14346c;
+    color:rgb(251, 187, 52);
+    padding: 16px;
+    font-size: 20px;
+    border: none;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: rgb(0, 0, 0);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #14346c;}
+  
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  .dropdown:hover .dropbtn {background-color: #000000;}
+  
+  
+
+.body{
+	background-color: rgb(251, 187, 52);
+	margin: 0;
+	display: grid;
+   font-family: Arial;
+   font-size: 17px;
+
+}
+
+
+.footer{
+	width: 100%;
+	background: rgb(251, 187, 52);
+	display: block;
+	position: sticky;
+}
+
+.inner-footer{
+	width: 95%;
+	margin: auto;
+	padding: 30px 10px;
+	display: flex;
+	flex-wrap: wrap;
+	box-sizing: border-box;
+	justify-content: center;
+}
+
+.footer-items{
+	/* width: 25%; */
+	padding: 30px 20px;
+	box-sizing: border-box;
+
+}
+
+
+.head{
+	margin: 10px 0;
+	color:black;
+	font-size: 18px;
+	font-weight: lighter;
+	text-transform: uppercase;
+	font-family:orbitron;
+
+}
+
+.border{
+	height: 2px;
+	width: 50px;
+	background: #14346c;
+}
+
+ul{
+	list-style: none;
+	color: #fff;
+	font-size: 15px;
+	letter-spacing: 0.5px;
+}
+
+ul a {
+	text-decoration: none;
+	outline: none;
+	line-height: 20px;
+	color: #192541;
+	transition: 0.3s;
+	font-family: 'Tahoma', sans-serif;
+}
+
+
+.footer-items ul li{
+	margin: 10px 0;
+	height: 25px;
+}
+ 
+.social a{
+	height: 15px;
+	width: 15px;
+	margin: 40px 5px;
+	padding: 3px;
+}
+
+
+
+
+.contact{
+	padding: 10px 0;
+	line-height: 35px;
+}
+
+.contact img{
+	height: 20px;
+}
+
+.contact span{
+	position: absolute;
+	padding-left: 5px;
+	font-family: 'Tahoma', sans-serif;
+	color: #192541;
+}
+
+@media screen and (max-width: 1085px){
+	.footer-items{
+		width: 50%;
+	}
+}
+
+@media screen and (max-width: 600px){
+	.footer-items{
+		width: 100%;
+	}
+}
+
+
+  body {
+   background-color:#c1aba6;
+   color: darkred;
+  }
+  h1 {
+    color:darkred;
+    text-align: center;
+  }
+  h3 {
+    text-align:center;
+    font-family: Monospace, Courier, Serif;
+	}
+  img {
+    display: block;
+    margin: 10px auto;
+	  margin-right: 15px;
+    margin-left: 15px;
+  }
+ 
+
+  label{
+    font-family: Monospace, Helvetica, sans-serif;
+    font-weight: 600;
+  }
+
+.columns {
+  float: right;
+  width: 30%;
+  background-color: white;
+  margin-top: 20px;
+}
+
+.price {
+    text-align:center;
+    font-family: Monospace;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.product {
+  list-style-type: none;
+  border: 5px solid darkred;
+  margin: 0;
+  padding: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.product:hover {
+  box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
+}
+
+.product .header {
+  background-color: darkred;
+  color: white;
+  font-size: 25px;
+  text-align:center;
+  font-family: Monospace;
+}
+
+.product li {
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #FFFFFF;
+  padding: 20px;
+  font-size: 18px;
+  text-align: left;
+  color:#000000;
+}
+
+.productList  {
+  border-bottom: 1px solid #FFFFFF;
+  padding: 20px;
+  font-size: 18px;
+  text-align: left;
+  color:#000000;
+  margin-left:60px;
+  font-family: Monospace, Courier, Serif;
+  font-weight: 600;
+}
+
+.product .grey { 
+  background-color: #FFFFFF;
+  font-size: 25px;
+  text-align: left;
+  font-family: Courier, Serif;
+  font-weight: 700;
+  padding:5px;
+  padding-left: 20px;
+  }
+
+
+.button {
+  background-color: #04AA6D;
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.headingText {
+  font-size: 40px;
+  font-family: Monospace;
+}
+
+@media only screen and (max-width: 600px) {
+  .columns {
+    width: 100%;
+  }
+}
+.price {
+    text-align:center;
+}
+
+.grid-item {
+ display: inline-grid;
+  /* background-color: rgba( 255, 255, 0.8); */
+  /* border: 1px solid rgba(0, 0, 0, 0.8); */
+  padding: 2px;
+  font-size: 10px;
+  text-align: center;
+  margin-bottom: 10px;
+  }
+  
+  .grid-container {
+  display: inline-grid;
+  width: 70%;
+  /* grid-template-columns: auto auto auto; */
+  text-align: center;
+  border-spacing: 20px;
+}
+
+  td{
+    background-color: white;
+    color:#000000;
+  }
+
+  
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.container {
+  width: 90%;
+  overflow: hidden; /* This is important for clearing floats */
+}
+
+.containerLarge {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.but{
+  color:white;
+  background-color: darkred;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  text-align: center;
+  margin-right: 10px;
+  font-family: Courier, Serif;
+  font-weight: 700;
+}
+
+.but:disabled,
+.but[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+}
+
+.submitForm{
+  color:#000000;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.submitForm input {
+  margin-right: 10px;
+}
+
+</style>
+</head>
+<body>
+
+ <header>
+        <div class="container2">
+            <ul class="nav3">
+                <li class="box1"><img class="logo" src="image/logo.png"></li>
+                <li class="box2">SPORTIVE WORLD</li>
+                <li></li>
+            </ul>
+        </div>
+        <nav id="navbar">
+            <div class="containerx">
+                <ul class="navhover">
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="Product.html">Products</a></li>
+                    <li><a href="comment.html">Query</a></li>
+                    <li><a href="">Quiz</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <div class="dropdown">
+                        <button class="dropbtn">Indulge in</button>
+                        <div class="dropdown-content">
+                          <a href="cricket.html">Cricket</a>
+                          <a href="basketball.html">Basketball</a>
+                          <a href="rugby.html">Rugby</a>
+                          <a href="tennis.html">Tennis</a>
+                        </div>
+                      </div>
+                      
+                    <li><a href="Mathuravan.html">About us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+	
+  <h1 class="headingText">Sports Equipments - Online</h1>
+
+<div class="columns">
+  <ul class="product">
+    <li class="header">Your Order Basket:</li>
+    <li class="grey">List:</li>
+    <li class="productList">Rugby Training Ball&nbsp;= <span class="count" id="count1">0</span></li>
+	  <li class="productList">Adidas Black Shoe&nbsp;= <span class="count" id="count2">0</span></li>
+	  <li class="productList">Training Singlet&nbsp;= <span class="count" id="count3">0</span></li>
+	  <li class="productList">Men's Black Jacket&nbsp;= <span class="count" id="count4">0</span></li>
+	  <li class="productList">Tennis Bag Black&nbsp;= <span class="count" id="count5">0</span> </li>
+	  <li class="productList">Tennis Racquet&nbsp;= <span class="count" id="count6">0</span></li>
+	  <li class="grey container"> 
+      <span class="left">Total:</span>
+      <span class="right" id="totalAmount">$ 0</span>
+    </li>
+<!-- 						
+    <li class="grey"><a href="#" class="button">Sign Up</a></li> -->
+  </ul>
+</div>
+
+<table class="grid-container">
+  <tr>
+  <td>
+  <h3>Rugby Training Ball</h3>
+  <img src="image/rug2.jpg" width="250" height="250">
+ <p class="price">$28.00</p>
+    <label for="quantity">Quantity:</label>
+    <div class="grid-item">
+      <select id="select1" name="quantity" onchange="myFunction('select1', 'count1')">
+        <option value="0" selected>0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+      </select>
+    </div>
+	</td>
+  <td>
+  <h3>Adidas Black Shoe</h3>
+  <img src="image/rug4.jpg" width="250" height="250">
+ <p class="price">$90.00</p>
+    <label for="quantity">Quantity:</label>
+    <div class="grid-item">
+      <select id="select2" name="quantity" onchange="myFunction('select2', 'count2')">
+        <option value="0" selected>0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+      </select>
+    </div>
+	</td>
+  <td>
+    <h3>Training Singlet</h3>
+  <img src="image/rug6.jpg" width="250" height="250">
+ <p class="price">$25.00</p>
+    <label for="quantity">Quantity:</label>
+    <div class="grid-item">
+      <select id="select3" name="quantity" onchange="myFunction('select3', 'count3')">
+        <option value="0" selected>0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+      </select>
+    </div>
+  </td>
+  </tr>
+  <tr>
+  <td>
+  <h3>Men's Black Jacket</h3>
+  <img src="image/Ten2.jpg" width="250" height="250">
+ <p class="price">$104.00</p>
+    <label for="quantity">Quantity:</label>
+    <div class="grid-item">
+      <select id="select4" name="quantity" onchange="myFunction('select4', 'count4')">
+        <option value="0" selected>0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+      </select>
+    </div>
+	</td>
+  <td>
+  <h3>Tennis Bag Black</h3>
+  <img src="image/Ten3.jpg" width="250" height="250">
+ <p class="price">$169.00</p>
+    <label for="quantity">Quantity:</label>
+    <div class="grid-item">
+      <select id="select5" name="quantity" onchange="myFunction('select5', 'count5')">
+        <option value="0" selected>0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+      </select>
+    </div>
+	</td>
+  <td>
+    <h3>Tennis Racquet</h3>
+  <img src="image/Ten4.jpg" width="250" height="250">
+ <p class="price">$220.00</p>
+    <label for="quantity">Quantity:</label>
+    <div class="grid-item">
+      <select id="select6" name="quantity" onchange="myFunction('select6', 'count6')">
+        <option value="0" selected>0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+      </select>
+    </div>
+	</td>
+	</tr>
+	
+</table>
+
+<div>
+  <form class="submitForm" action="Summary.html">
+    <label for="fname">Name:</label>
+    <input type="text" id="fname" name="fname">
+    <label for="contact">Contact:</label>
+    <input type="text" id="contact" name="contact">
+    <label for="express">Express Delivery</label>
+    <input type="checkbox" id="exp" name="express" value="express">
+    <br><br>
+    <div class="containerLarge"> 
+      <input type="submit" class="but right" id="submitButton" value="Place your order"/>
+      <button onclick="clearAll()" class="but right"> Clear your order </button>  
+    </div> 
+  </form> 
+</div>
+
+
+<script>
+
+document.getElementById('submitButton').disabled = true 
+
+function myFunction(x, y) {
+
+  var xValue = document.getElementById(x).value;
+  document.getElementById(y).innerHTML = xValue;
+  var proceedButton = document.getElementById('submitButton');
+
+  total1 = document.getElementById("select1").value * 28;
+  total2 = document.getElementById("select2").value * 90;
+  total3 = document.getElementById("select3").value * 25;
+  total4 = document.getElementById("select4").value * 104;
+  total5 = document.getElementById("select5").value * 169;
+  total6 = document.getElementById("select6").value * 220;
+
+  total = total1 + total2 + total3 + total4 + total5 + total6;
+  document.getElementById("totalAmount").innerHTML = "$ " + total;
+  localStorage.setItem('amount', total);
+
+  if (total > 0) {
+    proceedButton.disabled = false;
+  }
+  else{
+    proceedButton.disabled = true;
+  }
+
+}
+
+function clearAll(){
+  event.preventDefault();
+  document.getElementById('count1').innerHTML = "0";
+  document.getElementById('count2').innerHTML = "0";
+  document.getElementById('count3').innerHTML = "0";
+  document.getElementById('count4').innerHTML = "0";
+  document.getElementById('count5').innerHTML = "0";
+  document.getElementById('count6').innerHTML = "0";
+  document.getElementById("totalAmount").innerHTML = "$ 0";
+
+  document.getElementById("select1").value = "0";
+  document.getElementById("select2").value = "0";
+  document.getElementById("select3").value = "0";
+  document.getElementById("select4").value = "0";
+  document.getElementById("select5").value = "0";
+  document.getElementById("select6").value = "0"; 
+
+  document.getElementById('submitButton').disabled = true 
+
+}
+</script>
+
+
+<footer>
+
+	<div class="footer">
+		<div class="inner-footer">
+
+
+			<div class="footer-items">
+				<img src="logo1.png" height="50" alt="">
+			</div>
+
+			<div class="footer-items">
+				<h2 class="head">Quick Links</h2>
+					<div class="border"></div>
+					<ul>
+                        <a href="../html/home.html"><li>Home</li></a>
+						<a href="../html/contactus.html"> <li>Contact Us</li></a>
+						<a href="../html/baboutus.html"><li>About Us</li></a>
+					
+					</ul>
+			</div>
+
+			<div class="footer-items">
+				<h2 class="head">Legal</h2>
+					<div class="border"></div>
+					<ul>
+						<a href="../html/tac.html"><li>Privacy Policy</li></a>
+						<a href="../html/tac.html"><li>Terms and Condition</li></a>
+						<a href="../html/tac.html"><li>Contract</li></a>
+					</ul>
+			</div>
+
+			<div class="footer-items">
+				<h2 class="head">Contact US</h2>
+					<div class="border"></div>
+
+					<div class="contact">
+					<div class="place">
+						<img src="location.png"  alt=""> 
+						<span>Sportive World Galle Road Colombo 06</span>
+					 </div>
+		 
+					 <div class="phone">
+						<img src="mobile.png"  alt=""> 
+						<span>0770555586</span>
+					 </div>
+		 <br>
+					 <div class="mail">
+					 <a href="cricketworld@gmail.com">sportiveworld@gmail.com</a>
+					 </div>
+					</div>
+				
+		    </div>
+
+
+		<div class="footer-bottom">
+			<ul>
+				<div class="social">
+					<a href="https://www.facebook.com"><img src="image/facebook.png" height="25" width="25t"></a>
+					<a href="https://www.instagram.com"><img src="image/ig.png" height="25" width="25t"></a>
+					<a href="https://www.youtube.com"><img src="image/yt.png"  height="25" width="25t"></a>
+					<a href="https://accounts.snapchat.com"><img src="image/snap.png"  height="25" width="25t"></a>
+					<a href="https://www.whatsapp.com"><img src="image/whatsapp.png" height="25" width="25t"></a>
+				</div>
+			</ul>
+			
+		</div>
+		
+
+
+	    </div>
+    </div>
+
+			
+	
+
+ </footer>
+</body>
+</html>
+
+
+
+		

@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Summary</title>
+<style>
+  body {
+   background-color:#c1aba6;
+  }
+  .headingText {
+    color: darkred;
+    font-family: Monospace;
+    font-size: 25px;
+    font-weight: 700;
+  }
+  table {
+    background-color: white;
+    width: 600px;
+    margin: 25px auto;
+    border-spacing: 20px;
+    border-radius: 10px;
+  }
+  .container {
+    text-align: right;
+    padding-right: 20px;
+  }
+  .card { 
+    text-align:right;
+	}
+  ul {
+    list-style-type: none;
+  }
+  /* Added styles for card icons */
+  .icon-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+  }
+  .icon-container i {
+    font-size: 30px;
+    margin: 5px;
+    width: 40px;
+    height: 30px;
+    background-size: cover;
+  }
+
+  .tdContainer{
+    padding-left: 20px;
+  }
+
+  .trContainer{
+    font-family: Monospace, Helvetica, sans-serif;
+    font-weight: 600;
+    width:100%;
+  }
+
+  .lab{
+    margin-bottom: 15px;
+  }
+
+  #forumContainer {
+    display: none;
+    
+  }
+
+  .left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.containerLarge {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.but{
+  color:white;
+  background-color: darkred;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  text-align: center;
+  margin-right: 10px;
+  font-family: Courier, Serif;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+</style>
+</head>
+<body>
+<table>
+<tr>
+	  <td class="headingText" colspan="2">
+      Order summary
+    </td>
+    <td colspan="2">
+      <div class="container">
+        <select name="lang" id="lang">
+          <option value="Eng" selected>English</option>
+        </select>
+      </div>
+    </td>
+	</tr>
+	<tr class="trContainer">
+    <td class="tdContainer">Reference:</td>
+    <td style="color: gray;"> 95767532467000</td>
+  </tr>
+  <tr class="trContainer">
+    <td class="tdContainer">Description:</td>
+    <td style="color: gray;">Make Payment</td>
+  </tr>
+  <tr class="trContainer">
+    <td class="tdContainer">Amount(GBP):</td>
+    <td style="color: gray;" id="amount"> $10.00</td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td colspan="2" class="headingText">
+       Payment details <br>
+       <span style="color:gray; font-size: 12px;"> * indicates a required field</span>
+
+	</td>
+	<td>
+	<div class="card" >
+      <img src="image/card1.jpg" alt="" height="18" width="30"> 
+      <img src="image/card3.jpg" alt="" height="21" width="33">
+	  </div>
+    </td>
+  </tr>
+  <tr class="trContainer">
+    <td class="tdContainer">
+      <label for="card">Card Number*:</label><br>
+      <input type="number" name="cardNumber" maxlength="20" placeholder="1231-3243-2323-2332" id="cardNumber"><br>
+    </td>
+    <td>
+      <label for="hol">Card holder's Name*:</label><br>
+      <input type="text" name="cardHolderName" id="name" placeholder="John Peter" required><br>
+    </td>
+  </tr>
+  <tr class="trContainer">
+    <td class="tdContainer">
+      <label for="Exp">Expiry Date*:</label><br>
+      <input type="month" name="expiryDate" placeholder="MM/YY" required id="expiryDate"><br>
+    </td>
+    <td>
+	<label for="sec">Security Code*:</label>
+	 <img src="image/sec1.jpg" alt="" height="23" width="33"><br>
+      <input type="number" name="securityCode" id="securityCode" placeholder="3252" required>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="headingText">
+       Billing Address <br>
+       <span style="color:gray; font-size: 12px;" id="spanContainer1"> </span>
+    </td>
+    <td colspan="2">
+      <nav id="navbar">
+        <div class="container" onclick="showEdit1()" id="toggleButton1" style="font-family: Courier, monospace; font-weight: 700; cursor: pointer;">
+          Edit 
+        </div>
+      </nav>
+    </td>
+  </tr>
+  <tr class="trContainer" >
+    <td colspan="4" class="tdContainer">
+      <div id="forumContainer1">
+      <form id="myForm1">
+        <label for="add1" class="lab">Address 1*:      </label> 
+        <input type="address" name="address1" id="add1"  class="lab"> <br>
+        <label for="add2" class="lab">Address 2:      </label> 
+        <input type="address" name="address2" id="add2" class="lab"> <br>
+        <label for="add3" class="lab">Address 3:      </label> 
+        <input type="address" name="address3" id="add3" class="lab"> <br>
+        <label for="town" class="lab">Town/City*:    </label> 
+        <input type="city" name="town" id="city" class="lab"> <br>
+        <label for="pcode" class="lab">Post code/Zip code :    </label> 
+        <input type="code" name="code" id="pcode" class="lab"> <br>
+        <label for="coun" class="lab">Country*:</label> 
+        <select name="country" id="coun" class="lab">
+        <option value="SL" selected>Srilanka</option>
+        <option value="UK">United Kingdom</option>
+        <option value="Ame">America</option>
+        <option value="Pak">Pakistan</option>
+        <option value="Ind">India</option>
+        <option value="Rus">Russia</option>
+        <option value="Afg">Afghanistan</option>
+        <option value="Eng">England</option>
+        <option value="Aus">Australia</option>
+        <option value="Can">Canada</option> 
+        
+        </select><br>
+        <div class="containerLarge"> 
+          <input type="reset" class="but left" value="Cancel chaneges"> 
+          <input type="submit" class="but right" id="submitButton" value="Confirm"/> 
+        </div> 
+        </form>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="headingText">
+      Contact details
+      <span style="color:gray; font-size: 12px;" id="spanContainer2"> </span>
+    </td>
+    <td colspan="2">
+      <nav id="navbar">
+        <div class="container" onclick="showEdit2()" id="toggleButton2" style="font-family: Courier, monospace; font-weight: 700; cursor: pointer;">
+          Edit 
+        </div>
+      </nav>
+    </td>
+  </tr>
+  <tr class="trContainer" >
+    <td colspan="4" class="tdContainer">
+      <div id="forumContainer2">
+      <form id="myForm2">
+        <label for="tel" class="lab" req>Phone number :   </label>
+        <input type="tel" name="tel" id="tel" class="lab"><br>
+        <label for="email" class="lab">Email address :  </label> 
+        <input type="email"  name="email" id="email" class="lab"><br>
+        <div class="containerLarge"> 
+          <input type="reset" class="but left" value="Cancel chaneges"> 
+          <input type="submit" class="but right" id="submitButton" value="Confirm"/> 
+        </div> 
+        </form>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <div class="containerLarge"> 
+        <button type="reset" class="but left" onclick="cancelPayment()" style="background-color: rgb(7, 252, 88);"> Cancel </button>
+        <button type="submit" class="but right" onclick="makePayment()" style="background-color: rgb(7, 252, 88);"> Make Payment</button>
+      </div> 
+    </td>
+  </tr>
+</table>
+
+<script>
+  const data = localStorage.getItem('amount');
+  document.getElementById("amount").innerHTML = "$ " + data;
+
+  const forumContainer1 = document.getElementById('forumContainer1');
+  forumContainer1.style.display = 'none';
+
+  const forumContainer2 = document.getElementById('forumContainer2');
+  forumContainer2.style.display = 'none';
+
+  const form1 = document.getElementById('myForm1');
+  const form2 = document.getElementById('myForm2');
+
+  form1.addEventListener('submit', function(event) {
+    event.preventDefault();
+    var fullAddress = ""
+
+    if (!form1.address1.value) {
+      alert('Address 1 is required!');
+    }
+    else{
+      fullAddress = form1.address1.value + " " 
+    }
+
+    if(form1.address2.value){
+      fullAddress = fullAddress + form1.address2.value + " " 
+    }
+
+    if(form1.address3.value){
+      fullAddress = fullAddress + form1.address3.value + " " 
+    }
+
+    if (!form1.town.value) {
+      alert('Town/City is required!');
+    }
+    else{
+      fullAddress = fullAddress + form1.town.value + ", " 
+    }
+
+    if(form1.code.value){
+      fullAddress = fullAddress + form1.code.value + ", " 
+    }
+
+    fullAddress = fullAddress + form1.country.value + "." 
+
+    if(form1.town.value && form1.address1.value){
+      document.getElementById("spanContainer1").innerHTML = fullAddress;
+      showEdit1();
+    }
+
+  });
+
+  form2.addEventListener('submit', function(event) {
+    event.preventDefault();
+    var fullAddress = ""
+
+    if(form2.email.value){
+      fullAddress = fullAddress + form2.email.value + ", " 
+    }
+
+    if(form2.tel.value){
+      fullAddress = fullAddress + form2.tel.value + "." 
+    }
+
+    document.getElementById("spanContainer2").innerHTML = fullAddress;
+    showEdit2();
+
+  });
+
+  function showEdit1(){
+    const forumContainer = document.getElementById('forumContainer1');
+    const toggleButton = document.getElementById('toggleButton1');
+    const spanContainer = document.getElementById('spanContainer1');
+
+    if (forumContainer.style.display === 'none') {
+      forumContainer.style.display = 'block'; 
+      spanContainer.style.display = 'none'; 
+    } else {
+      forumContainer.style.display = 'none'; 
+      spanContainer.style.display = 'block'; 
+    }
+  }
+
+  function showEdit2(){
+    const forumContainer = document.getElementById('forumContainer2');
+    const toggleButton = document.getElementById('toggleButton2');
+    const spanContainer = document.getElementById('spanContainer2');
+
+    if (forumContainer.style.display === 'none') {
+      forumContainer.style.display = 'block';  
+      spanContainer.style.display = 'none'; 
+    } else {
+      forumContainer.style.display = 'none'; 
+      spanContainer.style.display = 'block'; 
+    }
+  }
+
+  function cancelPayment(){
+    window.location.href = 'Dup Buy2.html';
+  }
+
+  function makePayment(){
+    const cardNumber = document.getElementById('cardNumber').value;
+    const name = document.getElementById('name').value;
+    const securityCode = document.getElementById('securityCode').value;
+    const expiryDate = document.getElementById('expiryDate').value;
+
+    const spanContainer = document.getElementById('spanContainer1').textContent;
+    var makePayment = true;
+
+    if(!cardNumber){
+      alert('Card Number is required!');
+      makePayment = false;
+    }
+
+    if(!name){
+      alert('Card holder name is required!');
+      makePayment = false;
+    }
+
+    if(!securityCode){
+      alert('Security Code is required!');
+      makePayment = false;
+    }
+
+    if(!expiryDate){
+      alert('Expiry Date is required!');
+      makePayment = false;
+    }
+
+    if (!(spanContainer.trim().length > 0)) {
+      alert('Billing Address is required!');
+      makePayment = false;
+    } 
+    
+    if(makePayment){
+      alert('Order was placed successfully!');
+      window.location.href = 'Dup Buy2.html';
+    }
+
+  }
+</script>
+</body>
+</html>
